@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+    <!-- Ejercicio 1 - realizado por Andrés Esteban Sierra Sánchez -Gráfica interactiva-->
+    <html lang="es">
+    <head>
+    <!--En la etiqueta meta se encuentra el atributo que habilita los carácteres para el lenguaje español y también aquellos que permiten un diseño web responsivo, que cambie respecto al tamaño de la pantalla desde el css-->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--La etiqueta link que conecta el estilo con el HTML-->
+    <link href="css/estilo1.css" rel="stylesheet" type="text/css">
+    <title> Actividades </title>
+    </head>  
+<!-- ----------------------------  PAGINA ---------------------------------------------- -->
+<body> 
+    <!-- ----------------------------  Cabecera ---------------------------------------------- -->
+	<header>
+        <div class="contenedor">
+            <h2><a href="index.html">Home</a></h2> 
+            <!--Checkbox para selección del menu desplegable-->     
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar"><img src="imagenes/menu.png" width="30px"></label>
+                <!-- ----------------------- Menu ----------------------------------- -->
+                <nav class  ="menu">                
+                <a href="ubicacion.html">Ubicación</a>
+                <a href="poblacion.html">Población</a>
+                <a href="actividades.html">Actividades</a>
+                <a href="historia.html">Historia</a>
+                <a href="referencias.html">Referencias</a>
+                </nav>     
+                <!-- -------------x--------- Menu - --------------x------------------- -->
+        </div>  
+	</header>
+    <!-- ------------x----------------  Cabecera --------------------------x------------------- -->
+
+    <!-- -----------------------------  Banner ------------------------------------------------ -->
+    <div id="banner">
+        <section class="sec1b" style="background-image: url(imagenes/actividades.jpg)">
+            <div class="contenedor">
+                <h1>Actividades</h1>         
+            </div>    
+        </section>
+    </div>
+    <!-- ------------x----------------  Banner ----------------------------x------------------- -->
+
+    <!-- -------------------------------------------  MAIN ------------------------------------------------------ --> 
+    <!-- ---------------------------- Introducción   ------------------------------------------ -->        
+    <section class="sec2">
+        <div class="sec2b">
+            <h1><span>¿Qué hacer en Toulouse?</span></h1>
+            <br>
+            <p>Toulouse es una ciudad llena de colorido, con sus fachadas de 
+                ladrillo color rosa, su flor emblemática (la violeta), el azul
+                del glasto, etc. Es un lugar idóneo para unas vacaciones o un 
+                fin de semana con abundantes visitas y paseos. La “Ciudad Rosa”
+                está ubicada en el centro del Sudoeste, entre el Mediterráneo y 
+                el Atlántico y es un  compendio de patrimonio y de manera de vivir.<br>
+                Siguiendo una visita guiada, el pequeño tren turístico o en barco, 
+                su estancia será un placer entre el Garona y el canal du Midi o 
+                entre Saint-Sernin y la Ciudad del Espacio.</p>
+            <br>
+    <!-- ------------x---------------  Introducción ------------------------x------------------- -->    
+    </section>
+    <!-- ------------x---------------  Introducción ------------------------x------------------- -->
+    <!-- ---------------------------- Seccion intermedia   ------------------------------------- -->
+    <!-- -------------------------------------  Museos ----------------------------------------- -->
+    <section class="sec3_act1 b" style="background-image: url(imagenes/monumento.jpg);">
+        <!-- ----------------------------------  Descripción --------------------------------------- -->
+        <div class="descripcion">
+            <h3>Museos</h3>
+            <br>
+            <p>Toulouse tienes la oportunidad de acudir a un buen puñado de museos 
+                interactivos para que disfrutes de tu visita con los cinco sentidos.</p>
+        </div>
+        <!-- -----------------------------  Galeria de fotos --------------------------------------- -->
+        <div class="galeria gris">
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/saintroman.jpg">
+                </div>
+                <div class="lugar">
+                    <!--Esta clase será mostrada al momento de realizar :hover-->
+                    <h3>Musée Saint-Raymond</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/agustinos.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Musée des Augustins</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/natural.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Museum d’Historie Naturelle</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/aeroscopia.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Musée Aeroscopia</h3>
+                </div>
+            </div>            
+        </div>  
+    </section>
+    <!-- ---------------x---------------------  Museos ----------------------x------------------ -->
+    <!-- -----------------------------------  Jardines ----------------------------------------- --> 
+    <section class="sec3_act1">
+        <!-- -----------------------------  Galeria de fotos --------------------------------------- -->
+        <div class="galeria">
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/japones.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Jardin Japonais</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/plantes.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Jardin des Plantes</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/jardin.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Jardin du Grand Rond</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/raymond.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Jardin Raymond IV</h3>
+                </div>
+            </div>
+        </div>
+        <!-- ----------------------------------  Descripción --------------------------------------- -->
+        <div class="descripcion">
+            <h3>Jardines</h3>
+            <br>
+            <p> Esos reductos de naturaleza donde acuden los urbanitas para disfrutar de 
+                paseos y encontrar la mejor forma de relajarse.</p>
+        </div>
+    </section>
+    <!-- ----------------x------------------  Jardines ----------------------x------------------ --> 
+    <!-- ----------------------------------  Festivales ---------------------------------------- --> 
+    <section class="sec3_act1 b">
+        <!-- ----------------------------------  Descripción --------------------------------------- -->
+        <div class="descripcion">
+            <h3>Festivales</h3>
+            <br>
+            <p>Las fiestas y eventos en Toulouse reúnen actividades 
+                culturales en las que destaca el cine, el arte y la música. 
+                Así mismo, resaltan la integración de sus habitantes con los turistas.</p>
+        </div>
+        <!-- -----------------------------  Galeria de fotos --------------------------------------- -->
+        <div class="galeria sepia" >
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/violetf.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Toulouse Violet Festival</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/carnaval.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Le Carnaval</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/cine.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>Cinespaña</h3>
+                </div>
+            </div>
+            <div class="division">
+                <div class="division-item">
+                    <img src="imagenes/vino.jpg">
+                </div>
+                <div class="lugar">
+                    <h3>La Foire du Vin</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ------------x---------------  Sección Intermedia ------------------x------------------- -->
+    <!-- ----------------------------  Sección Final ------------------------------------------- -->
+    <section class="sec3_act1">
+        <div class="descripcion explora">
+            <h3>Arma tu plan</h3>
+            <br>
+            <p>Conoce más acerca de cada lugar y tarifas de entrada</p>
+            <a href="https://www.turismo-toulouse.es/cosas-que-ver-cosas-que-hacer" class="btn" target="_black"><h3>Conoce más</h3></a>
+        </div>
+    </section>
+    <!-- ------------x---------------  Sección Final ------------------------x------------------ -->
+    <!-- ----------------------------  Banner final -------------------------------------------- -->
+    <section class="sec5" style="background-image: url(imagenes/actividades.jpg)"></section>
+    <!-- ------------x---------------  Banner final ------------------------x------------------- -->
+    <!-- ------------x------------------------------  MAIN ------------------------------x----------------------- --> 
+
+    <!-- ----------------------------  PIE DE PÁGINA ------------------------------------------- -->
+    <div class="footer">
+        <p>&copy Esteban Sierra, 2020</p>
+    </div>
+    <!-- ------------x---------------  PIE DE PÁGINA ------------------------x------------------- -->
+</body>
+<!-- ------------x---------------  PAGINA --------------------------x------------------- -->
+</html>   

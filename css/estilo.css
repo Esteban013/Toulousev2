@@ -1,0 +1,1174 @@
+* 
+/* ------------------------------ CLASES GLOBALES ----------------------------*/
+/* ----------------------- Cuerpo ----------------------*/
+{
+    margin: 0;
+    padding: 0;
+    /* Se aplica box-sizing para mantener el mismo tamaño del box
+    contando con el margin y padding*/
+    box-sizing: border-box;
+    font-weight: initial;
+    line-height: 2rem; 
+}
+/* ---------------------- Fuentes ----------------------*/
+    @font-face {
+        font-family: Abel;
+        src: url('../fonts/Abel/Abel-Regular.ttf');
+    }
+    @font-face {
+        font-family: "Lexend";
+        src: url("../fonts/Lexend_Deca/LexendDeca-Regular.ttf");
+    }
+    /* --------------- Títulos y parrafos -------------------*/
+    h1{
+        font-family: "Lexend";
+        font-size: 2.5rem;
+    }
+    h2{
+        font-family: Lexend;
+        font-size: 3rem;
+        font-weight: bolder;
+        line-height: 3rem;
+    }
+    h3{
+        font-family: Abel;
+        font-size: 1.3rem;
+    }
+    p{
+        font-family: Lexend;
+    }
+    /* ----------------------- Lista ------------------------*/
+    ul{
+        font-family: Lexend;
+        text-decoration: none;
+    }
+    section{
+        width: 100%;
+    }
+
+/* ------------------- Contenedor -----------------------*/
+/* Se utiliza para almacenar el vinculo HOME y menú dentro
+    de un mismo div, también es utilizado en el título del 
+    banner */
+    .contenedor{
+        width: 98%;
+        margin: auto;
+    }
+/* ----------------------- CABECERA ------------------------*/
+    header {
+        width: 100%;
+        height: 4.5rem;
+        background: rgba(255,255,255,1);
+        position:fixed; 
+        color: white;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    header .contenedor{
+        display: table;
+        margin: auto;
+    }
+    header h2 a{
+        font-size: 1.6rem;
+        font-weight: initial;
+        color: #3f4954;
+        float: left;
+        text-decoration: none;
+        padding: 1rem 0 0 1rem;
+        border: none;
+    }
+    header label {
+        display: none;
+    }
+    /* ---------------------- Menu ----------------------*/
+    #menu-bar{
+        display: none;
+    }    
+    .menu{
+        font-family: Abel;
+        font-size: 1.1rem;
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
+        border: none;
+        float: right;
+    }
+    .menu a {
+        height: 4em;
+        color: #3f4954;
+        text-decoration: none;
+        padding: 1.4rem;
+        border: none;
+        transition: 0.5s;
+    }
+    .menu a:hover{
+        color: white;
+        background: rgba(234, 171,157,0.8);
+    }
+
+/* -------------------- SECCION FINAL --------------------------*/
+    section.sec5{    
+        height: 50vh;
+        position: relative;
+        overflow: hidden;
+        background-position:bottom;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    /* ------------------- Contenedor -----------------------*/
+    /* Se utiliza :before o :after para agregar figuras que permite
+    el diseño para varios banner, suele estar acompañado por content */
+    section.sec5:before{
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        /* Se utiliza para cambiar el angulo respecto al eje Y */
+        transform: skewY(5deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+/* -------------------- PIE DE PÁGINA --------------------------*/
+    .footer{
+        position: relative;
+        background: white;
+        background-position:bottom;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        bottom: 0px;
+        padding: .5rem;
+    }
+/* --------------x-------------- CLASES GLOBALES --------------x-------------*/
+
+/* ------------------------------ CLASES - INDEX ----------------------------*/
+/* A continuación se muestran las clases utilizadas únicamente en la pagina 
+    index.html */
+/* ----------------------- BANNER --------------------------*/
+    /* ---------------------- Fondo ----------------------*/    
+    #banner .sec1{
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background: url(../imagenes/principal.jpeg);
+        /* Utilizado para fijar la imagen*/
+        background-attachment:fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #banner .sec1:before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: right;
+        transform: skewY(5deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    #banner .sec1:after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background:#fff;
+        transform-origin: left;
+        transform: skewY(-5deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    /* --------------------- Títulos --------------------*/      
+    #banner .sec1 .contenedor{
+        position: absolute;
+        text-align: center;
+        padding-top: 10rem;
+    }
+    #banner .sec1 .contenedor h1{
+        color: white;
+        font-size: 5em;
+        line-height: 1.4em;
+    }
+    #banner .sec1 .contenedor h2{
+        color: white;
+        font-size: 2em;
+        line-height: 1.4em;
+    }
+    /* ---------------------- Botón ----------------------*/      
+    #banner .sec1 .btn{
+        margin: 10px;
+        background: linear-gradient(120deg, #d78b78 0%, #eaab9d 100%);
+        background-size: cover;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+    }
+    #banner .sec1 .btn:hover{
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+    button.btn{
+        border: none;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+/* -----------x----------- BANNER ---------------x----------*/
+
+/* -------------------- INTRODUCCIÓN -----------------------*/
+
+    section.sec2{
+        height: auto;
+        padding: 3rem 5rem 01rem 5rem;
+        box-sizing: border-box;
+        text-align: justify;
+        line-height: 2rem;    
+        justify-content: center;
+    }
+    /* --------------------- Títulos --------------------*/   
+    .sec2 h1{
+        text-align: center;
+        font-size: 3rem;
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+    }
+    /* Se realiza para adornar los titulos iniciales de cada
+    pagina */
+    .sec2 h1:before{
+        content: "";
+        display: block;
+        width: 15rem;
+        height: 0.1rem;
+        background: #000;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: -2;
+    }
+    .sec2 h1:after{
+        content: "";
+        display: block;
+        width: 15rem;
+        height: 0.1rem;
+        background: #000;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: -2;
+    }
+    /* Espacio en blanco utilizado para ocultas las lineas
+    cuadno se realiza responsive */
+    .sec2 span{
+        background: #fff;
+    }
+/* ---------x----------- INTRODUCCIÓN ------------x---------*/
+
+/* ----------------- SECCIÓN INTERMEDIO --------------------*/
+    section.sec3{
+        position: absolute;
+        color: white;
+        height: 30rem;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-image: url(../imagenes/sec3.jpg);
+        background-size: cover;
+        z-index: -1;
+    }    
+    section.sec3:before{        
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        transform: skewY(2deg);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    section.sec3:after{        
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        transform: skewY(-2deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+    .sec3 .content{
+        position: relative;
+        z-index: -2;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background: rgba(215, 139, 120,0.8);  
+        padding: 6%;         
+    }
+    /* --------------------- Parrafos --------------------*/   
+    .sec3 .content p{
+        font-size: 0.9rem;
+        text-align: justify;        
+    }
+/* ---------x------- SECCIÓN INTERMEDIO ----------x---------*/
+
+/* ---------------- FICHAS DESCRIPTIVAS -------------------*/
+    section.sec4{
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .descripcion{
+        width: 500px;
+        text-align: right;
+        content: center;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .sec4 .descripcion p{
+        font-size: 1.2rem;
+    }
+    .sec4 .descripcion h3{
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    /* --------------------- Fichas --------------------*/   
+    .sec4 .card{
+        position: relative;
+        width: 300px;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.6);
+        margin: 30px;
+        overflow: hidden;
+        text-align: center;
+        transition: all 0.25s;
+    }
+    /* Permite aumentar el tamaño del carta */
+    .sec4 .card:hover{
+        transform: scale(1.05);
+    }
+    .sec4 .card img{
+        width: 300px;
+        height: 220px;
+    }
+    .sec4 .card p{
+        margin: 30px;
+        font-size: .9rem;
+        line-height: 1.5rem;
+        text-align: justify;
+        height: 10rem;
+    }
+    /* --------------------- Títulos --------------------*/   
+    .sec4 .card .subcard2{
+        background: white;
+        color:rgba(88, 3, 187,0.8);
+    }
+    .sec4 .card .subcard3{
+        background: white;        
+        color:rgba(113, 113, 113,1);
+    }
+    .sec4 .card h3{        
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+    }
+/* --------x------- FICHAS DESCRIPTIVAS ---------x---------*/
+/* ------------x----------------- CLASES - INDEX --------------x-------------*/
+
+/* ---------------------------- CLASES - PAGINAS ----------------------------*/
+/* A continuación se muestran las clases utilizadas en las paginas ubicación,
+    población, actividades y historia */
+/* ----------------------- BANNER --------------------------*/
+    /* ---------------------- Fondo ----------------------*/ 
+    #banner .sec1b{
+        height: 25rem;
+        position: relative;
+        display: flex;
+        color: white;    
+        overflow: hidden;
+        background-attachment:fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-content: center;
+    }
+    #banner .sec1b:before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        transform: skewY(-8deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+    #banner .sec1b .contenedor{
+        position: absolute;
+        text-align: left;
+        padding-top: 10rem;
+        padding-left: 5%;        
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }
+    /* --------------------- Títulos --------------------*/
+    #banner .sec1b .contenedor h1{
+        font-size: 5rem;
+    }
+    .sec2b h1{
+        line-height: 3rem;
+    }
+
+/* -------------x-------------- CLASES - PAGINAS -------------x--------------*/
+
+
+/* ---------------------------- CLASES - UBICACIÓN ----------------------------*/
+/* A continuación se muestran las clases utilizadas únicamente en la pagina 
+    ubicación.html */
+/* --------------x------------- CLASES - UBICACIÓN --------------x-------------*/
+    /* ----------------------- SIMBOLOS --------------------------*/
+    .sec2b{
+        margin-bottom: 3rem;
+    }
+    .contenedor2.mapa{
+        height: 50vh;
+    }
+    /* --------------------- Escudo --------------------*/
+    /* Esta clase se utilizara como padre para la realización de otros
+    diseños de DIV en otras paginas */
+    .contenedor2.simbolos{
+        position: relative;
+        margin-top: 0;
+        color: black;
+        background-image: url(../imagenes/escudo.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 70vh;
+    }
+    .contenedor2.simbolos .texto{
+        height: 70vh;
+        width: 0%;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+        transform-origin: left;
+        transition: all 0.4s;
+        background-color:rgba(2, 25, 134,0.5);
+        padding-top: 30vh;
+        color: white;
+    }
+    .contenedor2.simbolos .texto h3{
+        transition: 0.5s;
+        opacity: 1;
+        margin-top: 1rem;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bolder;
+    }
+    /* Efecto de recuadro */
+    .contenedor2.simbolos:hover .texto{
+        width: 100%;
+        transition: all 0.5s;
+    }
+    .contenedor2.simbolos:hover .texto h3{
+        transition: all 0.5s;
+    }
+    /* --------------------- Bandera --------------------*/
+    .contenedor2.simbolos.b{
+        background-image: url(../imagenes/bandera.jpg);
+    }
+    .contenedor2.simbolos.b .texto{
+        background-color:rgba(208, 22, 36,0.5);
+    }
+    /* --------------------- Mapa ----------------------*/
+    .contenedor2.simbolos.m{
+        background-image: url(../imagenes/mapa.svg);
+    }
+    .contenedor2.simbolos.m .texto{
+        background-color:rgba(255, 255, 255,0.5);
+        color: black;
+    }
+    /* ------------x---------- SIMBOLOS -----------x--------------*/    
+    
+
+/* ---------------------------- CLASES - POBLACIÓN ----------------------------*/
+/* A continuación se muestran las clases utilizadas únicamente en la pagina 
+    población.html */
+    /* ----------------------- PARRAFOS --------------------------*/
+    .contenedor2{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+        padding: 1.5rem 0 4rem 0;
+    }
+    /* ------------------- Descripción --------------------*/
+    .contenedor2 .descripcion{
+        width: 50%;
+        height: 100%;
+        padding: 1rem 5rem 1rem 1rem;
+        box-sizing: border-box;
+        text-align: right;     
+    }
+    .contenedor2 .descripcion h3{
+        font-size: 2.3rem;
+        font-weight: bolder;
+    }
+    /* --------------------- Imagenes --------------------*/
+    .contenedor2 .box{     
+        position: relative;
+        width: 40%;
+        height: auto;
+    }
+    .contenedor2 .box:before{      
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border: 10px solid rgba(87, 85, 38,0.8);
+        width: 100%;
+        height: 100%;
+    }
+    .contenedor2 .box img{
+        width: 100%;
+        height: 100%;
+    }
+    /* ------------------ Segundo Parrafo --------------------*/
+    /*Para varias páginas se módifico estilos y colores 
+    de los anterioees div */
+    .contenedor2.b{
+        background-color: rgba(87, 85, 38,1)  ;
+        color: white;
+    }
+    .contenedor2.b .descripcion{
+        text-align: left;
+        padding: 4rem 1rem 1rem 6rem;
+    }
+    .contenedor2.b .box:before{
+        border: 10px solid rgba(255,255,255,0.8);
+        right: -40px;
+        top: 20px;
+    }
+    /* ----------x------------ PARRAFOS ----------------x---------*/
+/* --------------x------------- CLASES - POBLACIÓN --------------x-------------*/
+
+
+/* ---------------------------- CLASES - ACTIVIDADES ----------------------------*/
+/* A continuación se muestran las clases utilizadas únicamente en la pagina 
+    actividades.html */
+    /* ----------------------- MUSEOS --------------------------*/    
+    section.sec3_act1{
+        position: absolute;
+        display: flex;
+        color: black;
+        height: auto;
+        padding: 5rem 2rem;
+        position: relative;
+        overflow: hidden;
+        background-color:white;
+    }
+    .sec3_act1 .descripcion{
+        width: 60%;        
+        display: inline-block;
+        text-align: center;
+    }
+    .sec3_act1 .descripcion p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .sec3_act1 .descripcion h3{
+        font-size: 4rem;
+        text-align: left;
+        font-weight: bolder;
+    }
+    .sec3_act1 .descripcion .btn h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .gris .division-item img{        
+        filter: grayscale(100%);
+    }
+    /* ----------------------- FESTIVALES --------------------------*/    
+    .sec3_act1.b .descripcion p{
+        background-color: rgba(32, 31, 31, 0.8);
+    }   
+    section.sec3_act1.b{
+        background-image: url(../imagenes/festival.jpg);
+        filter: sepia(40%);
+        background-size: cover;
+        color: white;
+    }       
+    section.sec3_act1.b:before{        
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        transform: skewY(4deg);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    section.sec3_act1.b:after{        
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background:white;
+        transform-origin: left;
+        transform: skewY(-4deg);
+        box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.8);
+    }
+    .sepia .division-item img{
+        filter: sepia(80%);
+    }
+    /* ----------------------- Galeria --------------------------*/ 
+    .galeria{
+        width: 100%;
+        height: auto;
+        padding: 1rem 6rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
+    .division{
+        display: flex;
+        position: relative;
+        margin: auto;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+    /* ----------------------- Imagen --------------------------*/       
+    .division-item{
+        width: auto;
+        height: 15rem;
+        position: relative;
+        transition: all .4s;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px #000;
+        border-radius: 20px 20px 30px 23px;
+    }
+    .division-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+    }  
+    .division:hover .division-item img{
+        transform: scale(1.2, 1.2);
+        filter: grayscale(0%);
+        filter: sepia(0%);
+    }
+    /* ----------------------- Titulo --------------------------*/
+    .division .lugar{
+        height: 0px;
+        width: 90%;
+        overflow: hidden;
+        text-align: center;
+        position: absolute;
+        bottom: 1rem;
+        transition: all 0.4s;
+        background-color:rgba(0, 0, 0, 0.5);
+        border-radius: 0px 0px 30px 23px;
+    }
+    .division .lugar h3{
+        transition: 0.5s;
+        opacity: 1;
+        margin-top: 1rem;
+        color: white;
+    }
+    .division:hover .lugar{
+        height: 25%;
+        transition: all 0.5s;
+    }
+    .division:hover .lugar h3{
+        transition: all 0.5s;
+    }
+    /* ----------------------Parrafo final --------------------------*/ 
+    .sec3_act1 .descripcion .btn{
+        width: 180px;
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 1rem;
+        padding: 20px 0px;
+        background-color: teal;
+        text-decoration: none;
+        color: white;
+    }
+    .descripcion.explora{
+        justify-content: center;
+        width: 100%;
+    }
+    .descripcion.explora h3{
+        text-align: center;
+    }
+/* --------------x------------- CLASES - ACTIVIDADES --------------x-------------*/
+
+/* ---------------------------- CLASES - HISTORIA ----------------------------*/
+/* A continuaci ón se muestran las clases utilizadas únicamente en la pagina 
+    historia.html */
+    
+    #hist{
+        /* Esto se realiza para dejar el menu al inicio de la pagina y así 
+        visualizar el bookmark que se realiza */
+        position: relative;
+    }
+    /* ----------------------- NAVEGACION --------------------------*/
+    .contenedor2.simbolos.historia{
+        background-image: url(../imagenes/historia.jpg);
+        background-attachment: fixed;
+        height: auto;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;                
+    }
+    .contenedor2.simbolos.historia .descripcion{
+        width: 100%;        
+        display: inline-block;
+        text-align: center;
+    }
+    .contenedor2.simbolos.historia .descripcion p{
+        font-size: 1.5rem;
+    }
+    .contenedor2.simbolos.historia .descripcion h3{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    /* ----------------------- Menu --------------------------*/
+    .contenedor2.simbolos.historia .mhistoria{
+        font-family: Abel;
+        font-size: 1.1rem;
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
+        border: none;
+        float: right;
+    }
+    .contenedor2.simbolos.historia .mhistoria a {
+        height: auto;
+        color: white;
+        border: 1px solid white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: 0.5s;
+        font-size: 1.3rem;
+        font-weight: bolder;
+        margin: 5px;
+        text-align: center;
+    }
+    .contenedor2.simbolos.historia .mhistoria a:hover{
+        color: black;
+        background: white;
+    } 
+    /* ----------------------- HISTORIA --------------------------*/
+    .contenedor3{
+        position: relative;
+        width: 100%;
+        padding: 2rem 6rem;
+        text-align: justify;
+    }
+    .contenedor3 h2{
+        font-family: Abel;
+        font-weight: bolder;
+        font-size: 2rem;
+        text-align: center;
+    }    
+    .contenedor3 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* ----------------------- Imagenes circualar1 --------------------------*/
+    .imgBox{
+        position: relative;
+        overflow: hidden;
+        width: 350px;
+        height: 350px;
+        float: left;
+        border-radius: 50%;
+        margin: 20px;
+        shape-outside: circle();
+    }
+    /* ----------------------- Imagenes circualar2 --------------------------*/
+    .imgBox2{        
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        float: right;
+        border-radius: 50%;
+        margin: 20px;
+        shape-outside: circle();
+    }
+    /* ------------------------ Bookmark Inicio --------------------------*/
+    .contenedor3 a{
+        height: auto;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        transition: 0.5s;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .contenedor3 a:hover{
+        color: white;
+        background: black;
+    } 
+    /* ----------x------------ HISTORIA --------------x-----------*/
+/* --------------x------------- CLASES - HISTORIA --------------x-------------*/
+
+
+/* ---------------------------- CLASES - REFERENCIAS ----------------------------*/
+/* A continuación se muestran las clases utilizadas únicamente en la pagina 
+    referencias.html */
+    /* ----------------------- BANNER --------------------------*/
+    #banner .referencias{
+        height: 25rem;
+        position: relative;
+        display: flex;
+        color: white;    
+        overflow: hidden;
+        background-attachment:fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+    }    
+    #banner .referencias:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;      
+        background:url("../imagenes/referencias.jpg");
+        border-radius: 0 0 50% 50%/ 0  0 100% 100%;
+        transform: scaleX(1.5);
+        background-attachment:fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }    
+    #banner .referencias .contenedor{
+        position: absolute;
+        text-align: center;
+        padding-top: 13rem;
+        padding-left: 5%;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }    
+    #banner .referencias .contenedor h1{
+        font-size: 5rem;
+    }
+    /* ------------x---------- BANNER --------------x-----------*/
+    /* -----------------------SECCIONES ------------------------*/
+    .contenedor2.ref{
+        background: rgba(46, 25, 75,1);
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 2rem;
+        color: rgba(46, 25, 75,1);
+        display: flex;
+        height: 25rem;
+        padding: 0 0 0 0.5rem;
+    }
+    .sec2b img{
+        display: block;
+        box-align:center;
+        margin: auto;
+        width: 100%;
+    }
+    /* ---------------------Título Seccion------------------------*/
+    .contenedor2.ref .descripcion{
+        width: 33%;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        text-align: center;
+        transition: all 0.4s;
+        /* permite recortar el contenido */
+        overflow: hidden;     
+    }
+    .contenedor2.ref .descripcion.a:hover{
+        transform: scale(1.05);
+        box-shadow: 5px 5px 15px #000;    
+    }
+    .contenedor2.ref .descripcion h3{
+        background-color: rgba(255,255,255, 1);
+        font-size: 3.5rem;
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        padding: 11.5rem 0;
+    }
+    /* -----------------------Subtitulo ------------------------*/
+    .contenedor2.ref .descripcion h2{
+        font-size: 2rem;
+        color: white;      
+    }
+    /* ---------------------Referencias ------------------------*/
+    .contenedor2.ref ul{
+        text-align: center;
+        list-style-type: none;
+        list-style-position: inside;    
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .contenedor2.ref li{
+        width: 50%;
+    }
+    /* --------------------Hipervinculo ------------------------*/
+    .contenedor2.ref a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+    }
+    .contenedor2.ref a:hover{
+        text-decoration: underline ;
+    }
+    /* ----------Sección de las referencias------------------------*/
+    .contenedor2.ref .descripcion.info{
+        padding: 1rem 1.3rem;
+        margin:0;
+        background-color:transparent;
+        box-shadow: none;
+        color: black;
+    }
+    /* ----------SECCIONES- UBCIACION Y ACTIVIDADES---------------*/
+    .contenedor2.ref.b{
+        background-color: white;
+        padding: 0 0.5rem 0 0;   
+    }
+    /* --------------------Titulos ------------------------*/
+    .contenedor2.ref.b .descripcion {
+        background-color: rgba(46, 25, 75,1);
+        margin: 0;
+        padding: 0;
+    }
+    .contenedor2.ref.b .descripcion h3{
+        background-color: rgba(46, 25, 75,1);
+        color: white;
+        text-align: center;
+    }
+    /* ------------Subtitulos,Hipervinculo, Referencias --------------------*/
+    .contenedor2.ref.b .descripcion.info h2, .contenedor2.ref.b .descripcion.info a, .contenedor2.ref.b .descripcion.info{
+        background-color: white;
+        color: rgba(46, 25, 75,1);
+        text-align: center;
+        padding: 1rem;
+    }
+     /* ------------x----------SECCIONES --------------x-----------*/
+/* --------------x------------- CLASES - REFERENCIAS --------------x-------------*/
+
+    
+/* ----------------------------- RESPONSIVE 800PX--------------------------------*/
+@media only screen and (max-width: 800px) { 
+    /* ----------------------- CABECERA ------------------------*/
+    /* ---------------------- Menu ----------------------*/
+    .menu{
+        padding-top: 4rem;
+        position: absolute;        
+        display: block; 
+        top: 4.5rem;
+        left: 0; 
+        width: 50%;
+        height: 100vh;
+        background: rgba(255,255,255,1);
+        transition: all 0s;
+        transform: translateX(-100%);
+    }
+    .menu a{
+        display: block;     
+        color: black;
+        text-align: center;
+    }
+    header label {
+        display: initial;
+        float: right;
+        font-size: 28px;
+        margin: 1.5rem 0;
+        cursor: pointer;
+    }
+    #menu-bar:checked ~ .menu{
+        transform: translateX(100%);
+    }
+    /* ------------------- INTRODUCCIÓN -------------------------*/
+    section.sec2{
+        padding: 2rem 5rem 1rem 5rem; 
+    }
+    .sec2 .contenedor2{
+        flex-wrap: wrap;
+    }
+    .sec2 .descripcion{
+        width: 100%;
+        text-align: justify;
+    }
+    /* ---------------- SECCIÓN INTERMEDIA ----------------------*/
+    section.sec3{
+        height: auto; 
+    }
+    /* --------------------- Título----------------------*/
+    .sec2 .sec2b h1:before{
+        background: transparent;
+    }
+    .sec2 .sec2b h1:after{
+        background: transparent;
+    }
+    .sec2 .sec2b span{
+        background: transparent;
+    }
+    /* --------------------- Título----------------------*/
+    .sec4 .descripcion{
+        padding: 1rem 5rem; 
+        text-align: center;
+        width: 100%;
+    }
+    /* --------------- Card - Poblacion------------------*/
+    .sec2 .box{
+        width: 100%;
+        margin: auto;
+        padding-left: 0rem;
+        padding-top: 1rem;
+    }
+    /* ---------------------------- CLASES - HISTORIA ----------------------------*/
+    .contenedor3{
+        padding: 1rem 3rem;
+    }
+     /* --------------------Imagenes ------------------------*/
+    .imgBox{
+        width: 300px;
+        height: 300px;
+
+    }
+    .imgBox2{        
+        display: none;
+    }
+     /* ---------------------.-Menu ------------------------*/
+    .contenedor2.simbolos.historia .mhistoria{
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    /* ---------------------------- CLASES - POBLACION ----------------------------*/ 
+     /* --------------------SECCIONES ------------------------*/ 
+    .contenedor2 .descripcion{
+        padding: 1rem 7rem 1rem;
+        text-align: justify;
+        width: 100%;      
+    }
+    .contenedor2 .box{
+        width: 70%;      
+    }
+    .contenedor2.b{
+        flex-wrap: wrap-reverse;
+    }
+    .contenedor2.b .descripcion{
+        text-align: justify;
+        padding: 4rem 7rem 1rem;
+        width: 100%;
+    }
+    /* ------------------------- CLASES - ACTIVIDADES ----------------------------*/
+     /* --------------------SECCIONES ------------------------*/
+    section.sec3_act1.b{
+        flex-wrap: wrap;
+    }
+    section.sec3_act1{
+        flex-wrap: wrap-reverse;
+    }
+    .sec3_act1 .descripcion{
+        padding-top: 1rem;
+        width: 100%;
+    }
+     /* ----------------------- CLASES - REFERENCIAS ----------------------------*/
+     /* --------------------SECCIONES ------------------------*/
+    .contenedor2.ref{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .contenedor2.ref .descripcion{
+        width: 90%;
+        height: auto;
+    }
+    .contenedor2.ref.b{
+        flex-wrap: wrap-reverse;
+    }
+}
+/* --------------x-------------- RESPONSIVE 800PX-----------------x--------------*/
+
+/* ----------------------------- RESPONSIVE 500PX---------------------------------*/    
+@media only screen and (max-width: 500px) { 
+    /* ----------------------- CABECERA ------------------------*/
+    /* ---------------------- Menu ----------------------*/
+    #menu-bar:checked ~ .menu{
+        width: 100%;
+        transform: translateX(0%);
+    }
+    /* ---------------------- BANNER ---------------------------*/
+    #banner .sec1b .contenedor h1{
+        font-size: 3.7rem;
+    }
+
+    #banner .referencias .contenedor h1{
+        font-size: 3.7rem;
+    }
+    /* ------------------- INTRODUCCIÓN -------------------------*/
+    section.sec2{
+        padding: 2rem 3rem 1rem 3rem; 
+    }
+    /* ----------------- Fichas descriptivas --------------------*/
+    .sec4 .descripcion{
+        width: 400px;
+        height: auto;
+        padding: 1rem;
+    }
+    /* ------------- Card - Actividades -----------------*/
+    .sec2 .card2{
+        width: 22rem;
+        height: 30rem;
+        margin: 8px;
+    }
+    /* ---------------- SECCIÓN INTERMEDIA ----------------------*/
+    section.sec3{
+        display: flex;
+        padding-top: 60%;
+        background-attachment: inherit;
+    }
+    .sec3 .content{
+        left: 0%;
+        width: 100%;
+        transform-origin: 50% top;
+    }
+    /* ---------------------------- CLASES - HISTORIA ----------------------------*/
+    .contenedor3{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 2rem;
+    }
+}
+/* --------------x-------------- RESPONSIVE 500PX-----------------x---------------*/ 
